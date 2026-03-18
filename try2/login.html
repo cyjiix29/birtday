@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ffd6e0, #ffe9f0);
+        text-align: center;
+        color: #ff4d6d;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        max-width: 400px;
+        margin: auto;
+        box-shadow: 0 10px 25px rgba(255, 105, 135, 0.3);
+    }
+
+    p {
+        font-size: 15px;
+        color: #555;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        background: #ff4d6d;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #secret {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #ff4d6d;
+    }
+
+    .heart {
+        position: fixed;
+        color: #ff4d6d;
+        animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+        0% {transform: translateY(0); opacity: 1;}
+        100% {transform: translateY(-800px); opacity: 0;}
+    }
+</style>
+</head>
+
+<body>
+ 
+<div class="container">
+    <h1>Happy Birthday, My Love 💖</h1>
+
+    <div class="card">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos at itaque magni quaerat enim cupiditate alias maxime. Eligendi odio adipisci optio perferendis consequuntur enim ullam? Culpa, quos! Natus quaerat quibusdam voluptatem ipsam expedita perferendis, eveniet nesciunt iste accusamus aperiam ullam amet, praesentium mollitia illum ducimus voluptate blanditiis, debitis fugiat impedit ex vero quia explicabo! Quisquam est provident at esse cum, nostrum maiores iure perspiciatis optio! Ad inventore, itaque aliquam porro deserunt quaerat, quisquam non vero nulla est adipisci sit sequi nihil, distinctio nesciunt maxime ab praesentium blanditiis possimus. Debitis incidunt quidem obcaecati, cum soluta voluptate voluptatem veniam repellendus. Unde, nam.
+        </p>
+
+        <a href="index.html">
+            <button>Back</button>
+        </a>
+        <p id="secret">
+            I love you more than words can explain 💖
+        </p>
+    </div>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("secret").style.display = "block";
+}
+
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}, 300);
+</script>
+
+</body>
+</html>

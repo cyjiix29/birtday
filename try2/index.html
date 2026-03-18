@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ffd6e0, #ffe9f0);
+        text-align: center;
+        color: #ff4d6d;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        max-width: 400px;
+        margin: auto;
+        box-shadow: 0 10px 25px rgba(255, 105, 135, 0.3);
+    }
+
+    p {
+        font-size: 15px;
+        color: #555;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        background: #ff4d6d;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #secret {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #ff4d6d;
+    }
+
+    .heart {
+        position: fixed;
+        color: #ff4d6d;
+        animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+        0% {transform: translateY(0); opacity: 1;}
+        100% {transform: translateY(-800px); opacity: 0;}
+    }
+</style>
+</head>
+
+<body>
+ 
+<div class="container">
+    <h1>Happy Birthday, Aifah Kate A. Catacutan💖</h1>
+
+    <div class="card">
+        <p>
+            Happy Birthday, my love 💕<br><br>
+            I just want you to know how much you mean to me.  
+            You make my days brighter, my heart happier, and my life more beautiful.  
+            I'm so grateful to have you 💗<br><br>
+            I hope this small surprise makes you smile today 😊
+        </p>
+
+        <a href="login.html">
+            <button>Tap me</button>
+        </a>
+        <p id="secret">
+            I love you more than words can explain 💖
+        </p>
+    </div>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("secret").style.display = "block";
+}
+
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}, 300);
+</script>
+
+</body>
+</html>
